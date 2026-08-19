@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resume Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>Resume Analyzer</h1>
+
+            <p>
+                Upload your resume and get a quick analysis
+            </p>
+        </div>
+
+
+        <!-- Upload Section -->
+
+        <div class="card">
+
+            <h2>Upload Resume</h2>
+
+            <p class="description">
+                Supported formats: PDF and DOCX
+            </p>
+
+            <input
+                type="file"
+                id="resumeFile"
+                accept=".pdf,.docx"
+            >
+
+            <button
+                id="analyzeButton"
+                onclick="analyzeResume()"
+            >
+                Analyze Resume
+            </button>
+
+            <p id="statusMessage"></p>
+
+        </div>
+
+
+        <!-- Results Section -->
+
+        <div
+            class="card results"
+            id="resultsSection"
+        >
+
+            <h2>Analysis Results</h2>
+
+            <div class="result-item">
+
+                <strong>File Name:</strong>
+
+                <span id="fileName">
+                    -
+                </span>
+
+            </div>
+
+
+            <div class="result-item">
+
+                <strong>Word Count:</strong>
+
+                <span id="wordCount">
+                    -
+                </span>
+
+            </div>
+
+
+            <div class="result-item">
+
+                <strong>Skills Found:</strong>
+
+                <span id="skillCount">
+                    -
+                </span>
+
+            </div>
+
+
+            <div class="result-item">
+
+                <strong>Skills:</strong>
+
+                <span id="skills">
+                    -
+                </span>
+
+            </div>
+
+
+            <div class="preview">
+
+                <strong>Resume Text Preview</strong>
+
+                <p id="textPreview">
+                    -
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
